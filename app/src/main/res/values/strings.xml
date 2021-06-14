@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Auqaf Survey</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="main_folder">Auqaf Survey</string>
+    <string name="db_name">Auqaf Survey/database_05_06_2021</string>
+    <string name="images_folder">Auqaf Survey/images_05_06_2021</string>
+
+    <string name="app_uri">http://202.166.167.123:8080/urbanstore/road_demarcation_2021.apk</string>
+    <string name="app_uri_title">Road Demarcation App Download</string>
+    <string name="app_uri_apk_caption">road_demarcation_2021.apk</string>
+
+    <string name="request_location_updates">Request location updates</string>
+
+    <string name="remove_location_updates">Remove location updates</string>
+
+    <string name="launch_activity">Launch activity</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <string name="label">Search</string>
+
+    <!--___________________Variables________________________-->
+    <string name="version">1.0</string>
+
+    <string name="splash_main_title">Auqaf Survey</string>
+    <!--Local Government &amp; Community Development-->
+    <string name="splash_sub_title">Government of the Punjab</string>
+
+    <string name="login_main_title">Government of the Punjab</string>
+    <!--Clean and Green Punjab-->
+    <string name="login_sub_title">Auqaf Survey</string>
+
+    <string-array name="categories">
+        <item>Mosque</item>
+        <item>Shrine</item>
+        <item>Imambargah</item>
+        <item>Graveyard</item>
+        <item>Others</item>
+    </string-array>
+
+    <!--Faisal Work-->
+    <string-array name="lease_period">
+        <item>Select Lease Period</item>
+        <item>Yearly</item>
+        <item>3 Year</item>
+        <item>7 Year</item>
+    </string-array>
+
+    <string name="no_imei">Your Mobile has no IMEI Number, Please change the mobile for using this app.</string>
+    <string name="no_gps">Your Mobile do not have GPS sensor, Please change the mobile for using this app.</string>
+    <string name="new_industry">Add New\nIndustry</string>
+    <string name="title_activity_land_survey">MainActivity</string>
+    <string name="title_activity_house_form">House Form</string>
+</resources>

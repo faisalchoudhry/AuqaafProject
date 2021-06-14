@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/snackbarView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff">
+
+        <LinearLayout
+            android:id="@+id/surveyForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="363dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_part1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/ic_report_board" />
+
+                    <TextView
+                        android:id="@+id/tv_mainHeading_part1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/img_part1"
+                        android:layout_toRightOf="@+id/img_part1"
+                        android:gravity="center|center_vertical"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lot_no_house_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="Lot No."
+                        android:longClickable="false"
+                        android:tag="lot_no_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_lot_no_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false"
+                            android:tag="lot_no_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lot_area_house_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="Lot Area"
+                        android:longClickable="false"
+                        android:tag="lot_area_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_lot_area_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false"
+                            android:tag="lot_area_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_lease_period_house_form"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:entries="@array/lease_period"
+                        android:minHeight="55dp"
+                        android:tag="lease_period_house_form"
+                        tools:ignore="MissingClass" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_waqf_house_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="Lessee Name"
+                        android:longClickable="false"
+                        android:tag="lessee_name_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_lessee_name_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false"
+                            android:tag="lessee_name_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lessee_f_name_house_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="Lessee Father Name"
+                        android:longClickable="false"
+                        android:tag="lessee_f_name_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_lessee_f_name_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false"
+                            android:tag="lessee_f_name_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lessee_address_house_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="Lessee Address"
+                        android:longClickable="false"
+                        android:tag="lessee_address_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_lessee_address_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:longClickable="false"
+                            android:tag="lessee_address_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinner_waqf_property_name_house_form"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:minHeight="55dp"
+                        android:tag="waqf_property_name_house_form"
+                        tools:ignore="MissingClass" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinner_notification_no_house_form"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:minHeight="55dp"
+                        android:tag="notification_no_house_form"
+                        tools:ignore="MissingClass" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="Surveyor Remarks"
+                        android:tag="surveyor_remarks_house_form">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_remarks_house_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tag="surveyor_remarks_house_form"
+                            android:textColor="#000"
+                            android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="House Picture"
+                            android:textColor="@color/textColorPrimary"></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_house_house_form"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="image_house_house_form" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Document Picture"
+                            android:textColor="@color/textColorPrimary"></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_document_house_form"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="image_document_house_form" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Aks Picture"
+                            android:textColor="@color/textColorPrimary"></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_aks_house_form"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="image_aks_house_form" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="Khasra Girdawari Picture"
+                            android:textColor="@color/textColorPrimary"></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_khasra_girdawari_house_form"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="image_khasra_girdawari_house_form" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+                <Button
+                    android:id="@+id/sendSave"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/menu_item_backgrounds"
+                    android:text="Save Data"
+                    android:textColor="@drawable/text_color_change"
+                    android:textSize="21sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

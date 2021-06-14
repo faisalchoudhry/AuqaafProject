@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/snackbarView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff">
+
+        <LinearLayout
+            android:id="@+id/surveyForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="363dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_part1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/ic_report_board" />
+
+                    <TextView
+                        android:id="@+id/tv_mainHeading_part1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/img_part1"
+                        android:layout_toRightOf="@+id/img_part1"
+                        android:gravity="center|center_vertical"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_zone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:hint="Zone"-->
+<!--                        android:tag="zone_name"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:id="@+id/et_zone"-->
+<!--                            android:tag="zone_name"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_waqf_prop_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:longClickable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Waqf Property Name"
+                        android:tag="waqf_property_name"
+                    >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:longClickable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusable="false"
+                            android:id="@+id/et_waqf_prop_name"
+                            android:tag="waqf_property_name"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Select Category">
+
+                    </androidx.appcompat.widget.AppCompatTextView>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/categories"
+                        ></androidx.appcompat.widget.AppCompatSpinner>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_circle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Specify Other Category"
+                            android:tag="other_waqf_category"
+                        >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:textSize="16sp"
+                                android:id="@+id/et_circle"
+                                android:tag="other_waqf_category"
+                                ></com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_notification_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="Enter Notification Number"
+                        android:tag="notification_no"
+                    >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -/()"
+                            android:id="@+id/et_notification_no"
+                            android:tag="notification_no"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Is waqf property on lease">
+
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:tag="is_on_lease"
+                        >
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:tag="Yes"
+                            android:id="@+id/rb_is_on_lease_yes"
+                            android:layout_weight="1"
+                            ></androidx.appcompat.widget.AppCompatRadioButton>
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:tag="No"
+                            android:id="@+id/rb_is_on_lease_no"
+                            android:layout_weight="1"
+                            ></androidx.appcompat.widget.AppCompatRadioButton>
+                    </RadioGroup>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lease_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="Enter Lease Amount"
+                        android:tag="notification_no"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -/()"
+                            android:id="@+id/et_lease_amount"
+                            android:tag="lease_amount"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lease_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:longClickable="false"
+                        android:focusableInTouchMode="false"
+                        android:tag="lease_start_date"
+                        android:hint="Lease Start Date"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:longClickable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusable="false"
+                            android:id="@+id/et_lease_start_date"
+                            android:tag="lease_start_date"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_lease_end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:longClickable="false"
+                        android:focusableInTouchMode="false"
+                        android:tag="lease_end_date"
+                        android:hint="Lease End Date"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:longClickable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusable="false"
+                            android:id="@+id/et_lease_end_date"
+                            android:tag="lease_end_date"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Facility"
+                        android:tag="electricity_facility"
+                        android:id="@+id/chk_electricity_facility"
+                        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_electricity_consumer_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter Electricity Number"
+                        android:tag="electricity_consumer_no"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -/()"
+                            android:id="@+id/et_electricity_consumer_no"
+                            android:tag="electricity_consumer_no"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gas Facility"
+                        android:tag="gas_facility"
+                        android:id="@+id/chk_gas_facility"
+                        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_gas_consumer_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter Gas Consumer Number"
+                        android:tag="gas_consumer_no"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -/()"
+                            android:id="@+id/et_gas_consumer_no"
+                            android:tag="gas_consumer_no"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Water Facility"
+                        android:tag="water_facility"
+                        android:id="@+id/chk_water_facility"
+                        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Geezer Facility"
+                        android:tag="geezer_facility"
+                        android:id="@+id/chk_geezer_facility"
+                        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Toilet Facility"
+                        android:tag="toilet_facility"
+                        android:id="@+id/chk_toilet_facility"
+                        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_house_count"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:hint="Total Houses"-->
+<!--                        android:tag="total_houses"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:id="@+id/et_house_count"-->
+<!--                            android:tag="total_houses"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_others_count"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:hint="Total Other Properties"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:id="@+id/et_others_count"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_nla"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:hint="Total Notified Land Area"-->
+<!--                        android:tag="notified_land"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:id="@+id/et_nla"-->
+<!--                            android:tag="notified_land"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_cultLa"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:tag="cultivable_land"-->
+<!--                        android:hint="Total Cultivable Land Area"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:id="@+id/et_cultLa"-->
+<!--                            android:tag="cultivable_land"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_ncultLa"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:tag="non_cultivable_land"-->
+<!--                        android:hint="Total Non-Cultivable Land Area"-->
+<!--                    >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:tag="non_cultivable_land"-->
+<!--                            android:id="@+id/et_ncultLa"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_data_remarks"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:longClickable="false"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:tag="data_team_remarks"-->
+<!--                        android:hint="Data Team Remarks"-->
+<!--                        >-->
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:longClickable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:focusable="false"-->
+<!--                            android:tag="data_team_remarks"-->
+<!--                            android:id="@+id/et_data_remarks"-->
+<!--                            ></com.google.android.material.textfield.TextInputEditText>-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:tag="surveyor_remarks"
+                        android:hint="Surveyor Remarks"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:tag="surveyor_remarks"
+                            android:id="@+id/et_remarks"
+                            ></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="15dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Waqf Property Picture"
+                            android:textColor="@color/textColorPrimary"
+                            android:gravity="center"
+                            ></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_start_pt"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="front" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorPrimary"
+                            android:text=" Picture"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            ></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_end_pt"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="side" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorPrimary"
+                            android:text="Other Picture"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            ></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_other"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="other" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorPrimary"
+                            android:text="Other Picture"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            ></TextView>
+
+                        <ImageView
+                            android:id="@+id/image_other_"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/camera1"
+                            android:tag="other1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+                <Button
+                    android:id="@+id/sendSave"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/menu_item_backgrounds"
+                    android:text="Save Data"
+                    android:textColor="@drawable/text_color_change"
+                    android:textSize="21sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

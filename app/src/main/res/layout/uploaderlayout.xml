@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e4e3e3"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/noRecordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/noRecordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No records to display."
+                    android:textColor="#706f6f"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnGoBack"
+                    android:layout_width="100dp"
+                    android:onClick="btnGoBack"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/menu_item_backgrounds"
+                    android:textColor="@drawable/text_color_change"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Go Back" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

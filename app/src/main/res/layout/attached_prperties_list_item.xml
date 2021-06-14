@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/parent_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+        <LinearLayout
+            android:id="@+id/text_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="12"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Title" />
+
+            <LinearLayout
+                android:id="@+id/type_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="12">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/iv_icon"
+                    android:layout_weight="2"
+                    android:src="@drawable/shrine"
+                    app:tint="@color/colorPrimaryDark"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    ></ImageView>
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="4"
+                    tools:text="Type" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/address_location"
+                    app:tint="@color/colorPrimaryDark"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    ></ImageView>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="4"
+                    tools:text="address" />
+
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/type_container_"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:weightSum="12">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_zone"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="left"-->
+<!--                    android:layout_weight="6"-->
+<!--                    tools:text="Lahore" />-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_circle"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="left"-->
+<!--                    android:layout_weight="6"-->
+<!--                    tools:text="Lahore" />-->
+<!--            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+<!--            <View-->
+<!--                android:layout_width="1dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:layout_marginBottom="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                ></View>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/buttons_container"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_weight="5"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            >-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Start Survey"-->
+<!--                android:id="@+id/btn_start_survey"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                ></androidx.appcompat.widget.AppCompatButton>-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="View Data"-->
+<!--                android:visibility="gone"-->
+<!--                android:id="@+id/btn_view_data"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                ></androidx.appcompat.widget.AppCompatButton>-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Attached Properties"-->
+<!--                android:id="@+id/btn_view_attached_properties"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                ></androidx.appcompat.widget.AppCompatButton>-->
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/attached_prop_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="left"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="Register Sr: "
+                ></TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="left"
+                android:id="@+id/register_sr"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="adf212df12"
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attached_pro_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="left"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="Land Sequence: "
+                ></TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="left"
+                android:id="@+id/land_seq"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="adf212df12"
+                android:drawablePadding="10dp"
+                ></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

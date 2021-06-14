@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/parent_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+        <LinearLayout
+            android:id="@+id/text_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="12"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Title" />
+
+
+            <LinearLayout
+                android:id="@+id/attached_prop_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:text="Notification: "
+                    ></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="left"
+                    android:id="@+id/tv_notification_no"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:text="adf212df12"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/type_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="12">
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="32dp"-->
+<!--                    android:id="@+id/iv_icon"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:src="@drawable/shrine"-->
+<!--                    app:tint="@color/colorPrimaryDark"-->
+<!--                    android:scaleX="0.6"-->
+<!--                    android:scaleY="0.6"-->
+<!--                    ></ImageView>-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:id="@+id/tv_category_label"
+                    android:layout_weight="2.2"
+                    tools:text="Category : " />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="3.8"
+                    android:paddingLeft="2dp"
+                    tools:text="Type" />
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="32dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:src="@drawable/address_location"-->
+<!--                    app:tint="@color/colorPrimaryDark"-->
+<!--                    android:scaleX="0.6"-->
+<!--                    android:scaleY="0.6"-->
+<!--                    ></ImageView>-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="2"
+                    android:id="@+id/tv_address_label"
+                    tools:text="Address : " />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="4"
+                    android:paddingLeft="2dp"
+                    tools:text="address" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/attached_pro_container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="5dp"-->
+<!--                android:weightSum="2">-->
+
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:drawableTint="@color/colorPrimaryDark"-->
+<!--                    android:text="Properties Survey"-->
+<!--                    android:id="@+id/btn_edit_base_data"-->
+<!--                    ></androidx.appcompat.widget.AppCompatButton>-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/btn_start_survey"-->
+<!--                    android:drawableTint="@color/colorPrimaryDark"-->
+<!--                    android:text="Start Survey"-->
+<!--                    ></androidx.appcompat.widget.AppCompatButton>-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <TableRow android:background="#0079D6"-->
+<!--                android:weightSum="6"-->
+<!--                android:padding="2dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2.1"-->
+<!--                    android:text="Land Categories" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="A" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="K" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="M" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="0.9"-->
+<!--                    android:text="Actions" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="6" android:padding="2dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2.1"-->
+<!--                    android:text="Notified Land" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/tv_nla"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="203" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/tv_nlk"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="500" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/tv_nlm"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="400" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="0.9"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="6" android:padding="2dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2.1"-->
+<!--                    android:text="Cultivable Land" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_cultla"-->
+<!--                    android:text="203" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_cultlk"-->
+<!--                    android:text="500" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_cultlm"-->
+<!--                    android:text="400" />-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btn_cult_land"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_weight="0.9"-->
+<!--                    android:text="GO" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="6" android:padding="2dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2.1"-->
+<!--                    android:text="Non-Cultivable Land" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_ncultla"-->
+<!--                    android:text="203" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_ncultlk"-->
+<!--                    android:text="500" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_ncultlm"-->
+<!--                    android:text="400" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="0.9"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <TableRow android:background="#0079D6"-->
+<!--                android:weightSum="4"-->
+<!--                android:padding="5dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:text="Landuse Categories" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Count" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Actions" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="4"-->
+<!--                android:padding="3dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:text="Shops" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_shops"-->
+<!--                    android:text="15" />-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/btn_shops_survey"-->
+<!--                    android:text="GO" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="4"-->
+<!--                android:padding="3dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:text="Houses" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_house"-->
+<!--                    android:text="15" />-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/btn_house_survey"-->
+<!--                    android:text="GO" />-->
+<!--            </TableRow>-->
+<!--            <TableRow android:background="#DAE8FC"-->
+<!--                android:weightSum="4"-->
+<!--                android:padding="3dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:text="Others" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.5"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/tv_others"-->
+<!--                    android:text="15" />-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/btn_others_survey"-->
+<!--                    android:text="GO" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
